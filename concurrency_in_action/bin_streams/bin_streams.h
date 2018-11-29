@@ -18,7 +18,13 @@ public:
     , frozen( false )
   {
 #ifdef WINDOWS
+# if ( _MSC_VER == 1900 )
     _Init( _Getptr, ( std::size_t ) _Count, ( _Strstate ) 0 );
+# elif  ( _MSC_VER > 1900 )
+    _Init( _Getptr, ( std::size_t ) _Count, ( int ) 0 );
+# elif
+    ;
+#endif // _MSC_VER
 #else // UNIX
     _M_string = base_buffer::__string_type( _Getptr, ( std::size_t ) _Count );
     _M_stringbuf_init( std::ios_base::in | std::ios_base::out );

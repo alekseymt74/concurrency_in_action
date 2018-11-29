@@ -41,5 +41,8 @@
     <ClCompile Include="concurrency_in_action.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mult_sep_w_single_r\mult_sep_w_single_r.cpp">
+      <Filter>mult_sep_w_single_r</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
