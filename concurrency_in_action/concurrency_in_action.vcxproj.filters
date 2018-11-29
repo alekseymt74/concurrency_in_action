@@ -13,9 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="mult_sep_w_single_r">
+      <UniqueIdentifier>{eb6d36a4-4ada-462b-be47-32382bb001ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bin_streams">
+      <UniqueIdentifier>{2eec8e4d-70d6-4410-88bc-a04146c6b510}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mult_sep_w_single_r\mult_sep_w_single_r.h">
+      <Filter>mult_sep_w_single_r</Filter>
+    </ClInclude>
+    <ClInclude Include="bin_streams\bin_streams.h">
+      <Filter>bin_streams</Filter>
+    </ClInclude>
+    <ClInclude Include="tests.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

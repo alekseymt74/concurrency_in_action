@@ -155,7 +155,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="bin_streams\bin_streams.h" />
+    <ClInclude Include="mult_sep_w_single_r\mult_sep_w_single_r.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="tests.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="concurrency_in_action.cpp" />
