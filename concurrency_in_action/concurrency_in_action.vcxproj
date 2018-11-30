@@ -157,6 +157,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="bin_streams\bin_streams.h" />
+    <ClInclude Include="i_rws.h" />
     <ClInclude Include="mult_sep_w_single_r\mult_sep_w_single_r.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="tests.h" />

@@ -2,9 +2,7 @@
 #define MULT_SEP_W_SINGLE_R_H
 
 #include <memory>
-#include <mutex>
-#include <boost/thread/shared_mutex.hpp>
-#include <boost/thread/locks.hpp>
+#include <shared_mutex>
 
 #include "../bin_streams/bin_streams.h"
 
@@ -13,7 +11,7 @@ typedef std::unique_ptr< subscriber > sub_ptr;
 
 class os_writer : public std::enable_shared_from_this< os_writer >
 {
-  /*mutable*/ boost::shared_mutex mtx;
+  /*mutable*/ std::shared_timed_mutex mtx;
   bin_streams::bin_ostream _os;
 public:
   sub_ptr push_elem( uint32_t _sz );

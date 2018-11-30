@@ -1,8 +1,9 @@
 #include "mult_sep_w_single_r.h"
+#include <assert.h>
 
 sub_ptr os_writer::push_elem( uint32_t _sz )
 {
-  std::unique_lock< boost::shared_mutex > lock( mtx );
+  std::unique_lock< std::shared_timed_mutex > lock( mtx );
   uint32_t ind = ( uint32_t ) _os.tellp() + sizeof( uint32_t ) + sizeof( _sz );
   _os << ind << _sz;
   elem_w_ptr elem_w = std::make_unique< elem_writer >( shared_from_this(), ind, _sz );
@@ -17,13 +18,13 @@ void os_writer::update( uint32_t ind, const void *_ptr, uint32_t _sz )
 {
   assert( ind + _sz <= _os.length() );
   uint8_t *pos = _os.data() + ind;
-  boost::shared_lock< boost::shared_mutex > lock( mtx );
+  std::shared_lock< std::shared_timed_mutex > lock( mtx );
   memcpy( ( void * ) pos, _ptr, _sz );
 }
 
 void os_writer::process()
 {
-  std::unique_lock< boost::shared_mutex > lock( mtx );
+  std::unique_lock< std::shared_timed_mutex > lock( mtx );
   /* do smth*/
 }
 
