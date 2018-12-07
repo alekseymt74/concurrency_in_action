@@ -36,6 +36,9 @@
     <ClInclude Include="i_rws.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="memory_ordering.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
