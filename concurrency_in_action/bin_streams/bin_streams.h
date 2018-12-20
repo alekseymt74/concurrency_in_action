@@ -16,6 +16,7 @@ public:
   bin_streambuf( uint8_t *_Getptr, std::streamsize _Count )
     : base_buffer()
     , frozen( false )
+    , _Pendsave( nullptr )
   {
 #ifdef WINDOWS
 # if ( _MSC_VER == 1900 )
